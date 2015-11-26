@@ -11,6 +11,7 @@ public class TripleStore {
 	
 	public static void main(String[] args) {
 		TripleStore store = new TripleStore();
+		Connection c = new Connection(null, store);
 	}
 	
 	/**
