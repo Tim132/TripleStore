@@ -7,7 +7,7 @@ import javax.swing.table.DefaultTableModel;
 
 public class TripleStore {
 	
-	// COPIED FROM BRENT :^)
+	private JTable table;
 	
 	public static void main(String[] args) {
 		TripleStore store = new TripleStore();
@@ -42,9 +42,21 @@ public class TripleStore {
 	public JTable createTable() {
 		String[] columns = {"Subject", "predicate", "object"};
 		DefaultTableModel model = new DefaultTableModel(null, columns);
-		JTable table = new JTable(model);
+		table = new JTable(model);
 		table.setEnabled(false);
 		return table;
+	}
+	
+	/**
+	 * voegt tekst toe aan de tabel
+	 * @param s subject
+	 * @param p predicate
+	 * @param o object
+	 */
+	public void addTriple(String s, String p, String o) {
+		String[] columns = {s, p, o};
+		DefaultTableModel model = (DefaultTableModel) table.getModel();
+		model.addRow(columns);
 	}
 
 }
