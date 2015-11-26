@@ -7,7 +7,7 @@ import javax.swing.table.DefaultTableModel;
 
 public class TripleStore {
 	
-	
+	// COPIED FROM BRENT :^)
 	
 	public static void main(String[] args) {
 		TripleStore store = new TripleStore();
